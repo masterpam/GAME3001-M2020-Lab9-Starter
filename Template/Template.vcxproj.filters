@@ -111,6 +111,9 @@
     <ClCompile Include="Play.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StartScene.h">
@@ -234,6 +237,9 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Play.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
       <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>

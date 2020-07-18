@@ -7,8 +7,8 @@ enum DebugKeys
 {
 	H_Key,
 	K_Key,
-	P_Key, 
-	NUM_OF_DEBUG_KEYS
+	P_Key,
+	NUM_OF_DEBUG_KEYS; 
 
 
 

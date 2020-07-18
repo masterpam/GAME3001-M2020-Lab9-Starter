@@ -119,14 +119,14 @@ void PlayScene::handleEvents()
 		}
 	}
 
-	if (!m_bHpressed)
+	if (!m_bDebugKeys[H_KEY]) 
 	{
 		if (EventManager::Instance().isKeyDown(SDL_SCANCODE_H))
 
 
 		{
 			m_bDebugMode = !m_bDebugMode;
-			m_bHpressed = true;
+			m_bDebugKeys[H_KEY] = true;
 
 			if (m_bDebugMode)
 			{
@@ -142,17 +142,56 @@ void PlayScene::handleEvents()
 		}
 	}
 
-	if (EventManager::Instance().isKeyUp(SDL_SCANCODE_H))
-	{
-		m_bHpressed = false;
-	}
-
-    
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_H))
 
 	{
 
-        m_bHpressed = true;  
+		m_bHpressed = true;
+
+	}
+
+	if (!m_bDebugKeys[K_KEY])
+	{
+		if (EventManager::Instance().isKeyDown(SDL_SCANCODE_K))
+
+			std::cout << "DEBUG: Enemies taking damage!" << std::nedl; 
+		{
+			
+			m_bDebugKeys[K_KEY] = true;
+
+		}
+	}
+
+	if (!m_bDebugKeys[P_KEY])
+	{
+		if (EventManager::Instance().isKeyDown(SDL_SCANCODE_P))
+			m_bPatrolMode = !m_bPatrolMode;
+		    m_bDebugKeys[P_KEY] = true;
+
+
+		{
+			
+
+			if (m_bPatrolMode)
+			{
+				std::cout << " DEBUG Patrol mode on" << std::endl;
+			}
+
+			else
+			{
+				std::cout << " DEBUG Patrol mode off" << std::endl;
+
+			}
+
+		}
+	}
+
+
+    if (EventManager::Instance().isKeyDown(SDL_SCANCODE_P))
+
+	{
+
+        m_bDebugKeys[P_KEY] = false;  
 
 	}
 
