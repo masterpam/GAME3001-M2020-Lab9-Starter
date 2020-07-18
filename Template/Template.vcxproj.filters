@@ -114,6 +114,9 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="Pathnode.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StartScene.h">
@@ -241,6 +244,9 @@
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathnode.h">
+      <Filter>Game Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

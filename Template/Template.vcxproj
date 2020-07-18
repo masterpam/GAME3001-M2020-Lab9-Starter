@@ -181,6 +181,7 @@
     <ClCompile Include="..\src\Target.cpp" />
     <ClCompile Include="..\src\TextureManager.cpp" />
     <ClCompile Include="..\src\Util.cpp" />
+    <ClCompile Include="Pathnode.cpp" />
     <ClCompile Include="Play.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="StartScene.cpp" />
@@ -226,6 +227,7 @@
     <ClInclude Include="..\src\Util.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Pathnode.h" />
     <ClInclude Include="Play.h" />
     <ClInclude Include="StartScene.h" />
   </ItemGroup>
