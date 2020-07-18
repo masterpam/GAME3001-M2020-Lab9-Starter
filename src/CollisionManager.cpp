@@ -79,6 +79,9 @@ bool CollisionManager::AABBCheck(GameObject* object1, GameObject* object2)
 			case PLANE:
 				std::cout << "Collision with Plane !" << std::endl;
 
+
+				break;
+
 			default:
 				
 				break;

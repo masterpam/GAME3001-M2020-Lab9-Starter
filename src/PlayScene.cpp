@@ -10,24 +10,31 @@ PlayScene::PlayScene()
 
 PlayScene::~PlayScene()
 = default;
-
+555
 void PlayScene::draw()
 {
 	drawDisplayList();
 
 	Util::DrawLine(start:m_pPlayer->getTransform()->, end:m_pPlaneSprite->position);
 
-	Util::DrawRect(position:m_pPlayer-> Transform()-> glm:vec2(m_Player->getWidth() * 0.5, m_pPlayer->getHeight()
-
-    
-	
-}
+	Util::DrawRect(position:m_pPlayer->Transform()->glm : vec2(m_Player->getWidth() * 0.5f, m_pPlayer->getHeight()* 0.5f); 
+    m_pPlayer->getWidth(), m_pPlayer->getHeight()); 
+	Util::DrawRect(position:m_pPlaneSprite->Transform()->glm : vec2(m_pPlaneSprite->getWidth() * 0.5, m_pPlaneSprite->getHeight() * 0.5);  
+	m_pPlayer->getWidth(), m_pPlayer->getHeight());
+	Util::DrawRect(position:m_pObstacle->Transform()->glm : vec2(m_pObstacle->getWidth() * 0.5, m_pObstacle->getHeight() * 0.5);
+	m_pPlayer->getWidth(), m_pPlayer->getHeight());
+}5
 
 void PlayScene::update()
 {
 	updateDisplayList();
 
 	CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle);
+
+	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite);
+
+	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle);
+
 }
 
 void PlayScene::clean()
@@ -112,25 +119,40 @@ void PlayScene::handleEvents()
 		}
 	}
 
+	if (!m_bHpressed)
+	{
+		if (EventManager::Instance().isKeyDown(SDL_SCANCODE_H))
+
+
+		{
+			m_bDebugMode = !m_bDebugMode;
+			m_bHpressed = true;
+
+			if (m_bDebugMode)
+			{
+				std::cout << " DEBUG mode on" << std::endl;
+			}
+
+			else
+			{
+				std::cout << " DEBUG mode off" << std::endl;
+
+			}
+
+		}
+	}
+
+	if (EventManager::Instance().isKeyUp(SDL_SCANCODE_H))
+	{
+		m_bHpressed = false;
+	}
+
+    
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_H))
 
-
-	{
-		 m_bDebugMode = !m_bDebugMode;
-		 if (m_bDebugMode)
-			 std::cout << " Debug mode on" << std::endl;
-    }
-
-	else
-	{
-		std::cout << " Debug mode off" << std::endl;
-
-	}
-	if (EventManager::Instance().isKeyUp(SDL_SCANCODE_H))
-
 	{
 
-        m_bHpressed = false; 
+        m_bHpressed = true;  
 
 	}
 

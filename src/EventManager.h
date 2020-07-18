@@ -28,6 +28,8 @@ public:
 	bool isKeyDown(SDL_Scancode key) const;
 	bool isKeyUp(SDL_Scancode key) const;
 
+
+
 	// mouse events
 	bool getMouseButton(int button_number) const;
 	glm::vec2 getMousePosition() const;

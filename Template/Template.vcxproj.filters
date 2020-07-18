@@ -105,6 +105,12 @@
     <ClCompile Include="..\src\Obstacle.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Play.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StartScene.h">
@@ -220,6 +226,15 @@
     </ClInclude>
     <ClInclude Include="..\src\Obstacle.h">
       <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="StartScene.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Play.h">
+      <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -26,11 +26,10 @@ private:
 	Plane* m_pPlaneSprite;
 	Player* m_pPlayer;
 	bool m_playerFacingRight;
-
-	Obstacle* m_pObstacle;
+    Obstacle* m_pObstacle;
 	bool m_bDebugMode; 
-
-	bool m_bHpressed;  
+	bool m_bHpressed; 
+	
 };
 
 #endif /* defined (__PLAY_SCENE__) */
