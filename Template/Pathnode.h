@@ -5,7 +5,7 @@
 #include "GameObject.h"
 
 
-class PathNode : GameObject 
+class PathNode : public GameObject 
 
 {
 

@@ -10,7 +10,7 @@ PlayScene::PlayScene()
 
 PlayScene::~PlayScene()
 = default;
-555
+
 void PlayScene::draw()
 {
 	drawDisplayList();
@@ -23,7 +23,20 @@ void PlayScene::draw()
 	m_pPlayer->getWidth(), m_pPlayer->getHeight());
 	Util::DrawRect(position:m_pObstacle->Transform()->glm : vec2(m_pObstacle->getWidth() * 0.5, m_pObstacle->getHeight() * 0.5);
 	m_pPlayer->getWidth(), m_pPlayer->getHeight());
-}5
+
+
+	m_displayGrid();
+
+}
+
+
+
+
+
+
+
+
+
 
 void PlayScene::update()
 {
@@ -132,7 +145,7 @@ void PlayScene::handleEvents()
 			{
 				std::cout << " DEBUG mode on" << std::endl;
 			}
-
+			
 			else
 			{
 				std::cout << " DEBUG mode off" << std::endl;
@@ -141,6 +154,8 @@ void PlayScene::handleEvents()
 
 		}
 	}
+
+	
 
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_H))
 
@@ -211,6 +226,57 @@ void PlayScene::handleEvents()
 	}
 }
 
+void PlayScene::m_buildGrid()
+
+{
+	for (int row = 0; < Config::ROW_NUM; ++i);
+	{
+		for (int COL = 0; col < Config::COL_NUM; ++COL);
+
+		{
+			auto pathNode = new PathNode();
+			pathNode->getTransform(->position = glm::vec2(aipathNode->getWidth() * 0.5f *col, aipathNode->getHeight()* 0.5f * row);
+			m_pGrid.push_back(pathNode);  
+			    
+
+		}
+
+
+	}
+	std::cout << "Number of Nodes " << m_pGrid.size() << std::endl; 
+
+
+
+}
+
+void PlayScene::m_displayGrid()
+
+{
+
+	for (int row = 0; < Config::ROW_NUM; ++i);
+	{
+		for (int COL = 0; col < Config::COL_NUM; ++COL);
+
+		{
+			Util::DrawRect(m_pGrid[row * Config::COL_NUM + col]->getTransform()->position) 
+				
+				Util::DrawRect(position:m_pObstacle->Transform()->glm : vec2(m_pObstacle->getWidth() * 0.5, m_pGrid[row * Config::COL_NUM + col]m_pObstacle->getHeight() * 0.5, m_pGrid[row * Config::COL_NUM + col]);
+			m_pPlayer-> width 5(), m_pPlayer->Height5());
+
+
+
+			std::cout << "grid position:" << row * Config::COL_Num + col << std::endl; 
+		}
+
+
+	}
+
+
+}
+
+
+
+
 void PlayScene::start()
 {
 	m_bDebugMode = false;
@@ -229,4 +295,6 @@ void PlayScene::start()
 	m_pObstacle = new Obstacle();
 	addChild(m_pObstacle);
 	
-}
+} 
+
+
